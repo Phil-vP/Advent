@@ -1,0 +1,179 @@
+static void adventOfCode_a()
+    {
+        Console.WriteLine("Doing Advent of Code stuff");
+        string[] readText = File.ReadAllLines("B:\\Projekte\\C_Sharp\\Test_1\\input.txt");
+
+        int arr_length = 360;
+        int arr_height = 360;
+
+        int[,] full_array = new int[arr_length, arr_height];
+
+        List<coords> coord_list = new List<coords>();
+
+        Dictionary<char, int> number_dict = new Dictionary<char, int>();
+        Dictionary<char, bool> inf_dict = new Dictionary<char, bool>();
+
+        int counter = 65;
+        foreach(string s in readText)
+        {
+            string[] split = new string[2];
+            split = s.Split(", ");
+            char key = (char)counter;
+
+            coord_list.Add(new coords(key, Convert.ToInt32(split[0]), Convert.ToInt32(split[1])));
+
+            number_dict.Add(key, 0);
+            inf_dict.Add(key, true);
+
+            counter++;
+        }
+
+        Console.WriteLine(string.Join(",", coord_list));
+
+        
+
+
+        for(int x = 0; x < arr_length; x++)
+        {
+            for(int y = 0; y < arr_height; y++)
+            {
+                Dictionary<char, int> distances = new Dictionary<char, int>();
+
+                foreach(coords c in coord_list)
+                {
+                    distances.Add(c.iden, c.getManhattan(x, y));
+                }
+
+                bool first = true;
+                char max_index = 'A';
+                int max_value = -1;
+
+                /*
+                Console.WriteLine("x: {0}, y: {1}", x, y);
+
+                foreach (KeyValuePair<char, int> keypair in distances.OrderBy(key => key.Value))
+                {
+                    Console.WriteLine("Manhattan -- index: {0}, dist: {1}", keypair.Key, keypair.Value);
+                }
+
+                Console.WriteLine("--------");
+                */
+
+                foreach (KeyValuePair<char, int> keypair in distances.OrderBy(key => key.Value))
+                {
+                    if (first)
+                    {
+                        max_index = keypair.Key;
+                        max_value = keypair.Value;
+                        first = false;
+                    }
+                    else
+                    {
+                        if (max_value != keypair.Value)
+                        {
+                            number_dict[max_index] += 1;
+
+                            if (x == 0 || x == arr_length-1 || y == 0 || y == arr_height-1)
+                            {
+                                inf_dict[max_index] = false;
+                            }
+                        }
+                        break;
+                    }
+                }
+
+
+            }
+        }
+
+        foreach (char c in number_dict.Keys)
+        {
+            Console.WriteLine("{0}: {1}, {2}", c, number_dict[c], inf_dict[c]);
+        }
+
+        Console.WriteLine("\nSorting.....\n");
+
+        foreach (KeyValuePair<char, int> keypair in number_dict.OrderByDescending(key => key.Value))
+        {
+            char c = keypair.Key;
+            if(inf_dict[c]) Console.WriteLine("{0}: {1}", c, number_dict[c]);
+        }
+
+
+    }
+
+    static void adventOfCode_b()
+    {
+        Console.WriteLine("Doing Advent of Code stuff");
+        string[] readText = File.ReadAllLines("B:\\Projekte\\C_Sharp\\Test_1\\input.txt");
+
+        int arr_length = 360;
+        int arr_height = 360;
+        int maxDistance = 10000;
+
+        int[,] full_array = new int[arr_length, arr_height];
+
+        List<coords> coord_list = new List<coords>();
+
+        int counter = 65;
+        foreach (string s in readText)
+        {
+            string[] split = new string[2];
+            split = s.Split(", ");
+            char key = (char)counter;
+
+            coord_list.Add(new coords(key, Convert.ToInt32(split[0]), Convert.ToInt32(split[1])));
+
+            counter++;
+        }
+
+        Console.WriteLine(string.Join(",", coord_list));
+
+
+        int regionCounter = 0;
+
+        for (int x = 0; x < arr_length; x++)
+        {
+            for (int y = 0; y < arr_height; y++)
+            {
+                int counter_distance = 0;
+
+                foreach (coords c in coord_list)
+                {
+                    counter_distance += c.getManhattan(x, y);
+                }
+
+                if (counter_distance < maxDistance) regionCounter++;
+
+            }
+        }
+
+        Console.WriteLine("region size: {0}", regionCounter);
+
+
+
+    }
+}
+
+public struct coords
+{
+    public coords(char identifier, int spalte, int zeile)
+    {
+        iden = identifier;
+        X = spalte;
+        Y = zeile;
+    }
+
+    public int X { get; }
+    public int Y { get; }
+    public char iden { get; }
+
+    public override string ToString() => $"({iden}, {X}, {Y})";
+
+    public int getManhattan(int x, int y)
+    {
+        int abs_spalte = Math.Abs(X - x);
+        int abs_zeile = Math.Abs(Y - y);
+
+        return abs_spalte + abs_zeile;
+    }

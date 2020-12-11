@@ -1,0 +1,137 @@
+static void adventOfCode_a()
+    {
+        Console.WriteLine("Doing Advent of Code stuff");
+        string[] readText = File.ReadAllLines("B:\\Projekte\\C_Sharp\\Test_1\\input.txt");
+
+
+        Dictionary<char, element> allElements = new Dictionary<char, element>();
+
+        bool first = true;
+
+        element stativ = new element('-');
+
+
+        foreach(string s in readText)
+        {
+            string[] split = s.Split(" ");
+            Console.WriteLine(s);
+            // Console.WriteLine("{0} --> {1}", split[1], split[7]);
+
+            char pre = (char)split[1][0];
+            char post = (char)split[7][0];
+
+            if (!allElements.ContainsKey(pre))
+            {
+                allElements.Add(pre, new element(pre));
+                Console.WriteLine("Added Pre with ID {0}", pre);
+            }
+            if (!allElements.ContainsKey(post))
+            {
+                allElements.Add(post, new element(post));
+                Console.WriteLine("Added Post with ID {0}", post);
+            }
+
+            element pre_element = allElements[pre];
+            element post_element = allElements[post];
+
+
+            if (first)
+            {
+                stativ = pre_element;
+                pre_element.addNachfolger(post_element);
+                post_element.addVorgaenger(pre_element);
+                first = false;
+                continue;
+            }
+
+            Console.WriteLine("Stativ ID: {0}, Pre ID: {1}, Post ID: {2}", stativ.id, pre, post);
+            if(stativ.id == post)
+            {
+                Console.WriteLine("Stativ updated. Old: {0}, New: {1}" + stativ.id, pre);
+                stativ = pre_element;
+            }
+            pre_element.addNachfolger(post_element);
+            post_element.addVorgaenger(pre_element);
+
+            Console.WriteLine("\n--------\n");
+
+        }
+
+
+        List<element> iterList = new List<element>();
+        iterList.AddRange(allElements.Values);
+        //iterList.Add(stativ);
+
+        string finalStr = "";
+        while(iterList.Count > 0)
+        {
+            iterList.Sort((e1, e2) => e1.id.CompareTo(e2.id));
+
+            element x = iterList[0];
+            //iterList.AddRange(x.nachfolger);
+            //Console.WriteLine("Added Nachfolger of {0}", x.id);
+
+            if (x.prerequisites(finalStr) && !finalStr.Contains(x.id))
+            {
+                finalStr += x.id;
+
+                foreach (element n in x.nachfolger)
+                {
+                    if (!iterList.Contains(n))
+                    {
+                        iterList.Add(n);
+                    }
+                }
+            }
+                iterList.RemoveAt(0);
+        }
+        Console.WriteLine("Final String: {0}", finalStr);
+
+    }
+
+
+    public struct element
+    {
+        public element(char identifier)
+        {
+            id = identifier;
+            nachfolger = new List<element>();
+            vorgaenger = new List<element>();
+        }
+
+        public char id { get; }
+        public List<element> nachfolger { get; }
+        public List<element> vorgaenger { get; }
+
+        public void addNachfolger(element nf)
+        {
+            nachfolger.Add(nf);
+        }
+        public void addVorgaenger(element vg)
+        {
+            vorgaenger.Add(vg);
+        }
+        public bool prerequisites(string already_done)
+        {
+            string str_v = "";
+            foreach(element e in vorgaenger){
+                str_v += e.id;
+            }
+            bool everythingThere = true;
+            foreach(char c_v in str_v)
+            {
+                everythingThere &= already_done.Contains(c_v);
+            }
+
+            if (everythingThere)
+            {
+                Console.WriteLine("ALL GUD - Prerequisites needed for {0}: {1}, already done: {2}", id, str_v, already_done);
+            }
+            else
+            {
+                Console.WriteLine("ERROR - Prerequisites needed for {0}: {1}, already done: {2}", id, str_v, already_done);
+            }
+
+            return everythingThere;
+        }
+    }

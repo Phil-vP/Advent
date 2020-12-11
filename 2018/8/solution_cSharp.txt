@@ -1,0 +1,88 @@
+   static void adventOfCode_9()
+    {
+        // Result: -1125094965
+        Console.WriteLine("Doing Advent of Code stuff");
+
+        int numberOfMarbles = 70784;
+        int numberOfPlayers = 452;
+
+        int currentMarble = 0;
+        int currentNumberOfMarbles = 1;
+        int currentPlayer = 0;
+
+        int[] scores = new int[numberOfPlayers];
+
+
+        List<int> allMarbles = new List<int>();
+
+        allMarbles.Add(0);
+
+        printList(allMarbles, 0, -1);
+
+        for(int item = 1; item < numberOfMarbles; item++)
+        {
+            if(item%100000 == 0)
+            {
+                Console.WriteLine(item);
+            }
+            if(item != 0 && item % 23 == 0)
+            {
+                //Console.WriteLine("ALARM");
+                scores[currentPlayer] += item;
+
+                int sevenIndex = ((currentMarble + allMarbles.Count) - 7 ) % allMarbles.Count;
+                scores[currentPlayer] += allMarbles[sevenIndex];
+                allMarbles.RemoveAt(sevenIndex);
+                currentMarble = sevenIndex;
+                currentNumberOfMarbles--;
+            }
+            else
+            {
+                //Console.WriteLine("CurrentMarble: {0}, Is Zero? {1}, modulo23? {2}", item, (item != 0), (item % 23));
+                int spot = (currentMarble + 1) % currentNumberOfMarbles + 1;
+                allMarbles.Insert(spot, item);
+                currentMarble = spot;
+                currentNumberOfMarbles++;
+            }
+
+
+            // printList(allMarbles, currentMarble, currentPlayer);
+
+            currentPlayer = (currentPlayer +1) % numberOfPlayers;
+        }
+        Console.WriteLine("\n\n\n");
+
+
+        for (int i = 0; i < numberOfPlayers; i++)
+        {
+            Console.WriteLine("Player: {0}, Score: {1}", i + 1, scores[i]);
+        }
+
+        Console.WriteLine("\nHighscore: {0}", scores.Max());
+        
+
+
+    }
+
+    static void printList(List<int> liste, int currentMarble, int currentPlayer)
+    {
+        string s = "[" + (currentPlayer+1).ToString() + "]  ";
+        int x = 0;
+        foreach(int i in liste)
+        {
+
+            if (x == currentMarble)
+            {
+                s += "(" + i.ToString() + ") ";
+            }
+            else
+            {
+                s += i.ToString() + " ";
+            }
+
+
+
+            x++;
+        }
+        Console.WriteLine(s);
+    }

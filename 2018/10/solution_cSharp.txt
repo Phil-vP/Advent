@@ -1,0 +1,121 @@
+   static void adventOfCode_10()
+    {
+
+        string[] readText = File.ReadAllLines("C:\\Users\\Philipp\\Documents\\Advent of Code\\2018\\input.txt");
+
+        List<Point> allPoints = new List<Point>();
+
+        foreach (string s in readText)
+        {
+            string[] split = s.Split('<');
+            string pos = split[1].Split('>')[0];
+
+            string[] pos_split = pos.Split(',');
+
+            //Console.Write(pos);
+
+            string vel = split[2].Remove(split[2].Length - 1);
+
+            string[] vel_split = vel.Split(',');
+
+            //Console.Write(vel);
+            //Console.WriteLine();
+
+            Point p = new Point(Convert.ToInt32(pos_split[0]), Convert.ToInt32(pos_split[1]), Convert.ToInt32(vel_split[0]), Convert.ToInt32(vel_split[1]));
+
+            allPoints.Add(p);
+
+        }
+
+        int numberOfPoints = allPoints.Count;
+
+        int[] allX = new int[numberOfPoints];
+        int[] allY = new int[numberOfPoints];
+
+        for (int a = 0; a < 100000; a++)
+        {
+
+            int index = 0;
+            foreach (Point p in allPoints)
+            {
+                int oldX = p.X;
+                int oldY = p.Y;
+                int newX = oldX + a * p.dX;
+                int newY = oldY + a * p.dY;
+
+                allX[index] = newX;
+                allY[index] = newY;
+
+                //Console.WriteLine("Point moved from {0}|{1} to {2}|{3}", oldX+p.dX*(a-1), oldY+p.dY*(a-1), newX, newY);
+                index++;
+            }
+
+            int minX = allX.Min();
+            int minY = allY.Min();
+
+            int minAll = Math.Min(minX, minY);
+
+            for (int i = 0; i < numberOfPoints; i++)
+            {
+                allX[i] -= minX;
+                allY[i] -= minY;
+            }
+
+            int maxX = allX.Max() + 1;
+            int maxY = allY.Max() + 1;
+
+            if(maxX > 150 || maxY > 150)
+            {
+                continue;
+            }
+
+            char[,] positions = new char[maxY, maxX];
+
+            // Console.WriteLine("Array size: maxX - {0}, maxY - {1}\n", maxX, maxY);
+
+            for (int y = 0; y < maxY; y++)
+            {
+                for (int x = 0; x < maxX; x++)
+                {
+                    positions[y, x] = '.';
+                    // Console.WriteLine("Put a dot at {0}|{1}", x, y);
+                }
+            }
+
+            Console.WriteLine("");
+
+            for (int i = 0; i < numberOfPoints; i++)
+            {
+                int posX = allX[i];
+                int posY = allY[i];
+                // Console.WriteLine("Trying to access array position {0}|{1}", posX, posY);
+                positions[posY, posX] = '#';
+            }
+
+            for (int y = 0; y < maxY; y++)
+            {
+                for (int x = 0; x < maxX; x++)
+                {
+                    Console.Write(positions[y, x]);
+                }
+                Console.WriteLine();
+            }
+            Console.WriteLine("\n########\n This was try number {0} \n########\n", a);
+        }
+    }
+
+    public struct Point
+    {
+        public Point(int x, int y, int dx, int dy)
+        {
+            X = x;
+            Y = y;
+            dX = dx;
+            dY = dy;
+        }
+
+        public int X { get; }
+        public int Y { get; }
+        public int dX { get; }
+        public int dY { get; }
+    }

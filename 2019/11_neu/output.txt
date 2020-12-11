@@ -1,0 +1,1494 @@
+[0, 0]
+Painted 50|50 with 0 
+New direction: 1
+
+0
+1
+[0, 1]
+Painted 50|49 with 0 
+New direction: 2
+
+0
+1
+[0, 1]
+Painted 51|49 with 0 
+New direction: 3
+
+0
+0
+[0, 0]
+Painted 51|50 with 0 
+New direction: 2
+
+0
+0
+[0, 0]
+Painted 52|50 with 0 
+New direction: 1
+
+0
+1
+[0, 1]
+Painted 52|49 with 0 
+New direction: 2
+
+1
+1
+[1, 1]
+Painted 53|49 with 1 
+New direction: 3
+
+0
+0
+[0, 0]
+Painted 53|50 with 0 
+New direction: 2
+
+1
+0
+[1, 0]
+Painted 54|50 with 1 
+New direction: 1
+
+1
+1
+[1, 1]
+Painted 54|49 with 1 
+New direction: 2
+
+0
+1
+[0, 1]
+Painted 55|49 with 0 
+New direction: 3
+
+0
+0
+[0, 0]
+Painted 55|50 with 0 
+New direction: 2
+
+1
+0
+[1, 0]
+Painted 56|50 with 1 
+New direction: 1
+
+1
+1
+[1, 1]
+Painted 56|49 with 1 
+New direction: 2
+
+0
+1
+[0, 1]
+Painted 57|49 with 0 
+New direction: 3
+
+0
+0
+[0, 0]
+Painted 57|50 with 0 
+New direction: 2
+
+0
+0
+[0, 0]
+Painted 58|50 with 0 
+New direction: 1
+
+0
+1
+[0, 1]
+Painted 58|49 with 0 
+New direction: 2
+
+1
+1
+[1, 1]
+Painted 59|49 with 1 
+New direction: 3
+
+1
+0
+[1, 0]
+Painted 59|50 with 1 
+New direction: 2
+
+0
+0
+[0, 0]
+Painted 60|50 with 0 
+New direction: 1
+
+0
+1
+[0, 1]
+Painted 60|49 with 0 
+New direction: 2
+
+1
+1
+[1, 1]
+Painted 61|49 with 1 
+New direction: 3
+
+1
+0
+[1, 0]
+Painted 61|50 with 1 
+New direction: 2
+
+0
+0
+[0, 0]
+Painted 62|50 with 0 
+New direction: 1
+
+1
+1
+[1, 1]
+Painted 62|49 with 1 
+New direction: 2
+
+1
+1
+[1, 1]
+Painted 63|49 with 1 
+New direction: 3
+
+0
+0
+[0, 0]
+Painted 63|50 with 0 
+New direction: 2
+
+0
+0
+[0, 0]
+Painted 64|50 with 0 
+New direction: 1
+
+1
+1
+[1, 1]
+Painted 64|49 with 1 
+New direction: 2
+
+0
+1
+[0, 1]
+Painted 65|49 with 0 
+New direction: 3
+
+0
+0
+[0, 0]
+Painted 65|50 with 0 
+New direction: 2
+
+1
+0
+[1, 0]
+Painted 66|50 with 1 
+New direction: 1
+
+1
+1
+[1, 1]
+Painted 66|49 with 1 
+New direction: 2
+
+1
+1
+[1, 1]
+Painted 67|49 with 1 
+New direction: 3
+
+0
+0
+[0, 0]
+Painted 67|50 with 0 
+New direction: 2
+
+0
+0
+[0, 0]
+Painted 68|50 with 0 
+New direction: 1
+
+1
+1
+[1, 1]
+Painted 68|49 with 1 
+New direction: 2
+
+1
+1
+[1, 1]
+Painted 69|49 with 1 
+New direction: 3
+
+0
+0
+[0, 0]
+Painted 69|50 with 0 
+New direction: 2
+
+0
+0
+[0, 0]
+Painted 70|50 with 0 
+New direction: 1
+
+0
+1
+[0, 1]
+Painted 70|49 with 0 
+New direction: 2
+
+1
+1
+[1, 1]
+Painted 71|49 with 1 
+New direction: 3
+
+1
+0
+[1, 0]
+Painted 71|50 with 1 
+New direction: 2
+
+0
+0
+[0, 0]
+Painted 72|50 with 0 
+New direction: 1
+
+0
+1
+[0, 1]
+Painted 72|49 with 0 
+New direction: 2
+
+0
+1
+[0, 1]
+Painted 73|49 with 0 
+New direction: 3
+
+1
+0
+[1, 0]
+Painted 73|50 with 1 
+New direction: 2
+
+0
+0
+[0, 0]
+Painted 74|50 with 0 
+New direction: 1
+
+1
+1
+[1, 1]
+Painted 74|49 with 1 
+New direction: 2
+
+0
+1
+[0, 1]
+Painted 75|49 with 0 
+New direction: 3
+
+0
+0
+[0, 0]
+Painted 75|50 with 0 
+New direction: 2
+
+1
+0
+[1, 0]
+Painted 76|50 with 1 
+New direction: 1
+
+1
+1
+[1, 1]
+Painted 76|49 with 1 
+New direction: 2
+
+0
+1
+[0, 1]
+Painted 77|49 with 0 
+New direction: 3
+
+0
+0
+[0, 0]
+Painted 77|50 with 0 
+New direction: 2
+
+0
+0
+[0, 0]
+Painted 78|50 with 0 
+New direction: 1
+
+0
+1
+[0, 1]
+Painted 78|49 with 0 
+New direction: 2
+
+1
+1
+[1, 1]
+Painted 79|49 with 1 
+New direction: 3
+
+1
+0
+[1, 0]
+Painted 79|50 with 1 
+New direction: 2
+
+0
+0
+[0, 0]
+Painted 80|50 with 0 
+New direction: 1
+
+0
+1
+[0, 1]
+Painted 80|49 with 0 
+New direction: 2
+
+1
+1
+[1, 1]
+Painted 81|49 with 1 
+New direction: 3
+
+1
+0
+[1, 0]
+Painted 81|50 with 1 
+New direction: 2
+
+0
+0
+[0, 0]
+Painted 82|50 with 0 
+New direction: 1
+
+1
+1
+[1, 1]
+Painted 82|49 with 1 
+New direction: 2
+
+1
+1
+[1, 1]
+Painted 83|49 with 1 
+New direction: 3
+
+0
+0
+[0, 0]
+Painted 83|50 with 0 
+New direction: 2
+
+1
+0
+[1, 0]
+Painted 84|50 with 1 
+New direction: 1
+
+0
+1
+[0, 1]
+Painted 84|49 with 0 
+New direction: 2
+
+0
+1
+[0, 1]
+Painted 85|49 with 0 
+New direction: 3
+
+0
+0
+[0, 0]
+Painted 85|50 with 0 
+New direction: 2
+
+1
+0
+[1, 0]
+Painted 86|50 with 1 
+New direction: 1
+
+1
+1
+[1, 1]
+Painted 86|49 with 1 
+New direction: 2
+
+0
+1
+[0, 1]
+Painted 87|49 with 0 
+New direction: 3
+
+0
+0
+[0, 0]
+Painted 87|50 with 0 
+New direction: 2
+
+0
+0
+[0, 0]
+Painted 88|50 with 0 
+New direction: 1
+
+0
+1
+[0, 1]
+Painted 88|49 with 0 
+New direction: 2
+
+1
+1
+[1, 1]
+Painted 89|49 with 1 
+New direction: 3
+
+1
+0
+[1, 0]
+Painted 89|50 with 1 
+New direction: 2
+
+0
+0
+[0, 0]
+Painted 90|50 with 0 
+New direction: 1
+
+0
+1
+[0, 1]
+Painted 90|49 with 0 
+New direction: 2
+
+0
+1
+[0, 1]
+Painted 91|49 with 0 
+New direction: 3
+
+0
+0
+[0, 0]
+Painted 91|50 with 0 
+New direction: 2
+
+0
+1
+[0, 1]
+Painted 92|50 with 0 
+New direction: 3
+
+0
+1
+[0, 1]
+Painted 92|51 with 0 
+New direction: 0
+
+0
+0
+[0, 0]
+Painted 91|51 with 0 
+New direction: 3
+
+0
+1
+[0, 1]
+Painted 91|52 with 0 
+New direction: 0
+
+0
+1
+[0, 1]
+Painted 90|52 with 0 
+New direction: 1
+
+0
+0
+[0, 0]
+Painted 90|51 with 0 
+New direction: 0
+
+1
+0
+[1, 0]
+Painted 89|51 with 1 
+New direction: 3
+
+1
+1
+[1, 1]
+Painted 89|52 with 1 
+New direction: 0
+
+0
+1
+[0, 1]
+Painted 88|52 with 0 
+New direction: 1
+
+1
+0
+[1, 0]
+Painted 88|51 with 1 
+New direction: 0
+
+1
+0
+[1, 0]
+Painted 87|51 with 1 
+New direction: 3
+
+0
+1
+[0, 1]
+Painted 87|52 with 0 
+New direction: 0
+
+1
+1
+[1, 1]
+Painted 86|52 with 1 
+New direction: 1
+
+1
+0
+[1, 0]
+Painted 86|51 with 1 
+New direction: 0
+
+0
+0
+[0, 0]
+Painted 85|51 with 0 
+New direction: 3
+
+0
+1
+[0, 1]
+Painted 85|52 with 0 
+New direction: 0
+
+0
+1
+[0, 1]
+Painted 84|52 with 0 
+New direction: 1
+
+1
+0
+[1, 0]
+Painted 84|51 with 1 
+New direction: 0
+
+0
+0
+[0, 0]
+Painted 83|51 with 0 
+New direction: 3
+
+1
+1
+[1, 1]
+Painted 83|52 with 1 
+New direction: 0
+
+1
+1
+[1, 1]
+Painted 82|52 with 1 
+New direction: 1
+
+0
+0
+[0, 0]
+Painted 82|51 with 0 
+New direction: 0
+
+1
+0
+[1, 0]
+Painted 81|51 with 1 
+New direction: 3
+
+1
+1
+[1, 1]
+Painted 81|52 with 1 
+New direction: 0
+
+0
+1
+[0, 1]
+Painted 80|52 with 0 
+New direction: 1
+
+0
+0
+[0, 0]
+Painted 80|51 with 0 
+New direction: 0
+
+1
+0
+[1, 0]
+Painted 79|51 with 1 
+New direction: 3
+
+1
+1
+[1, 1]
+Painted 79|52 with 1 
+New direction: 0
+
+0
+1
+[0, 1]
+Painted 78|52 with 0 
+New direction: 1
+
+1
+0
+[1, 0]
+Painted 78|51 with 1 
+New direction: 0
+
+1
+0
+[1, 0]
+Painted 77|51 with 1 
+New direction: 3
+
+0
+1
+[0, 1]
+Painted 77|52 with 0 
+New direction: 0
+
+1
+1
+[1, 1]
+Painted 76|52 with 1 
+New direction: 1
+
+1
+0
+[1, 0]
+Painted 76|51 with 1 
+New direction: 0
+
+0
+0
+[0, 0]
+Painted 75|51 with 0 
+New direction: 3
+
+0
+1
+[0, 1]
+Painted 75|52 with 0 
+New direction: 0
+
+0
+1
+[0, 1]
+Painted 74|52 with 0 
+New direction: 1
+
+0
+0
+[0, 0]
+Painted 74|51 with 0 
+New direction: 0
+
+0
+0
+[0, 0]
+Painted 73|51 with 0 
+New direction: 3
+
+1
+1
+[1, 1]
+Painted 73|52 with 1 
+New direction: 0
+
+0
+1
+[0, 1]
+Painted 72|52 with 0 
+New direction: 1
+
+1
+0
+[1, 0]
+Painted 72|51 with 1 
+New direction: 0
+
+1
+0
+[1, 0]
+Painted 71|51 with 1 
+New direction: 3
+
+1
+1
+[1, 1]
+Painted 71|52 with 1 
+New direction: 0
+
+0
+1
+[0, 1]
+Painted 70|52 with 0 
+New direction: 1
+
+0
+0
+[0, 0]
+Painted 70|51 with 0 
+New direction: 0
+
+0
+0
+[0, 0]
+Painted 69|51 with 0 
+New direction: 3
+
+0
+1
+[0, 1]
+Painted 69|52 with 0 
+New direction: 0
+
+0
+1
+[0, 1]
+Painted 68|52 with 0 
+New direction: 1
+
+1
+0
+[1, 0]
+Painted 68|51 with 1 
+New direction: 0
+
+1
+0
+[1, 0]
+Painted 67|51 with 1 
+New direction: 3
+
+0
+1
+[0, 1]
+Painted 67|52 with 0 
+New direction: 0
+
+1
+1
+[1, 1]
+Painted 66|52 with 1 
+New direction: 1
+
+1
+0
+[1, 0]
+Painted 66|51 with 1 
+New direction: 0
+
+0
+0
+[0, 0]
+Painted 65|51 with 0 
+New direction: 3
+
+0
+1
+[0, 1]
+Painted 65|52 with 0 
+New direction: 0
+
+0
+1
+[0, 1]
+Painted 64|52 with 0 
+New direction: 1
+
+0
+0
+[0, 0]
+Painted 64|51 with 0 
+New direction: 0
+
+1
+0
+[1, 0]
+Painted 63|51 with 1 
+New direction: 3
+
+0
+1
+[0, 1]
+Painted 63|52 with 0 
+New direction: 0
+
+0
+1
+[0, 1]
+Painted 62|52 with 0 
+New direction: 1
+
+1
+0
+[1, 0]
+Painted 62|51 with 1 
+New direction: 0
+
+1
+0
+[1, 0]
+Painted 61|51 with 1 
+New direction: 3
+
+1
+1
+[1, 1]
+Painted 61|52 with 1 
+New direction: 0
+
+0
+1
+[0, 1]
+Painted 60|52 with 0 
+New direction: 1
+
+0
+0
+[0, 0]
+Painted 60|51 with 0 
+New direction: 0
+
+1
+0
+[1, 0]
+Painted 59|51 with 1 
+New direction: 3
+
+1
+1
+[1, 1]
+Painted 59|52 with 1 
+New direction: 0
+
+0
+1
+[0, 1]
+Painted 58|52 with 0 
+New direction: 1
+
+0
+0
+[0, 0]
+Painted 58|51 with 0 
+New direction: 0
+
+0
+0
+[0, 0]
+Painted 57|51 with 0 
+New direction: 3
+
+0
+1
+[0, 1]
+Painted 57|52 with 0 
+New direction: 0
+
+1
+1
+[1, 1]
+Painted 56|52 with 1 
+New direction: 1
+
+1
+0
+[1, 0]
+Painted 56|51 with 1 
+New direction: 0
+
+0
+0
+[0, 0]
+Painted 55|51 with 0 
+New direction: 3
+
+0
+1
+[0, 1]
+Painted 55|52 with 0 
+New direction: 0
+
+1
+1
+[1, 1]
+Painted 54|52 with 1 
+New direction: 1
+
+1
+0
+[1, 0]
+Painted 54|51 with 1 
+New direction: 0
+
+0
+0
+[0, 0]
+Painted 53|51 with 0 
+New direction: 3
+
+0
+1
+[0, 1]
+Painted 53|52 with 0 
+New direction: 0
+
+0
+1
+[0, 1]
+Painted 52|52 with 0 
+New direction: 1
+
+0
+0
+[0, 0]
+Painted 52|51 with 0 
+New direction: 0
+
+0
+0
+[0, 0]
+Painted 51|51 with 0 
+New direction: 3
+
+0
+1
+[0, 1]
+Painted 51|52 with 0 
+New direction: 0
+
+0
+0
+[0, 0]
+Painted 50|52 with 0 
+New direction: 3
+
+0
+0
+[0, 0]
+Painted 50|53 with 0 
+New direction: 2
+
+1
+1
+[1, 1]
+Painted 51|53 with 1 
+New direction: 3
+
+0
+0
+[0, 0]
+Painted 51|54 with 0 
+New direction: 2
+
+1
+0
+[1, 0]
+Painted 52|54 with 1 
+New direction: 1
+
+0
+1
+[0, 1]
+Painted 52|53 with 0 
+New direction: 2
+
+0
+1
+[0, 1]
+Painted 53|53 with 0 
+New direction: 3
+
+1
+0
+[1, 0]
+Painted 53|54 with 1 
+New direction: 2
+
+0
+0
+[0, 0]
+Painted 54|54 with 0 
+New direction: 1
+
+1
+1
+[1, 1]
+Painted 54|53 with 1 
+New direction: 2
+
+0
+1
+[0, 1]
+Painted 55|53 with 0 
+New direction: 3
+
+0
+0
+[0, 0]
+Painted 55|54 with 0 
+New direction: 2
+
+0
+0
+[0, 0]
+Painted 56|54 with 0 
+New direction: 1
+
+1
+1
+[1, 1]
+Painted 56|53 with 1 
+New direction: 2
+
+0
+1
+[0, 1]
+Painted 57|53 with 0 
+New direction: 3
+
+1
+0
+[1, 0]
+Painted 57|54 with 1 
+New direction: 2
+
+1
+0
+[1, 0]
+Painted 58|54 with 1 
+New direction: 1
+
+0
+1
+[0, 1]
+Painted 58|53 with 0 
+New direction: 2
+
+1
+1
+[1, 1]
+Painted 59|53 with 1 
+New direction: 3
+
+0
+0
+[0, 0]
+Painted 59|54 with 0 
+New direction: 2
+
+0
+0
+[0, 0]
+Painted 60|54 with 0 
+New direction: 1
+
+0
+1
+[0, 1]
+Painted 60|53 with 0 
+New direction: 2
+
+1
+1
+[1, 1]
+Painted 61|53 with 1 
+New direction: 3
+
+1
+0
+[1, 0]
+Painted 61|54 with 1 
+New direction: 2
+
+0
+0
+[0, 0]
+Painted 62|54 with 0 
+New direction: 1
+
+0
+1
+[0, 1]
+Painted 62|53 with 0 
+New direction: 2
+
+0
+1
+[0, 1]
+Painted 63|53 with 0 
+New direction: 3
+
+0
+0
+[0, 0]
+Painted 63|54 with 0 
+New direction: 2
+
+0
+0
+[0, 0]
+Painted 64|54 with 0 
+New direction: 1
+
+0
+1
+[0, 1]
+Painted 64|53 with 0 
+New direction: 2
+
+0
+1
+[0, 1]
+Painted 65|53 with 0 
+New direction: 3
+
+0
+0
+[0, 0]
+Painted 65|54 with 0 
+New direction: 2
+
+1
+0
+[1, 0]
+Painted 66|54 with 1 
+New direction: 1
+
+1
+1
+[1, 1]
+Painted 66|53 with 1 
+New direction: 2
+
+0
+1
+[0, 1]
+Painted 67|53 with 0 
+New direction: 3
+
+1
+0
+[1, 0]
+Painted 67|54 with 1 
+New direction: 2
+
+1
+0
+[1, 0]
+Painted 68|54 with 1 
+New direction: 1
+
+0
+1
+[0, 1]
+Painted 68|53 with 0 
+New direction: 2
+
+0
+1
+[0, 1]
+Painted 69|53 with 0 
+New direction: 3
+
+1
+0
+[1, 0]
+Painted 69|54 with 1 
+New direction: 2
+
+0
+0
+[0, 0]
+Painted 70|54 with 0 
+New direction: 1
+
+0
+1
+[0, 1]
+Painted 70|53 with 0 
+New direction: 2
+
+1
+1
+[1, 1]
+Painted 71|53 with 1 
+New direction: 3
+
+1
+0
+[1, 0]
+Painted 71|54 with 1 
+New direction: 2
+
+0
+0
+[0, 0]
+Painted 72|54 with 0 
+New direction: 1
+
+0
+1
+[0, 1]
+Painted 72|53 with 0 
+New direction: 2
+
+1
+1
+[1, 1]
+Painted 73|53 with 1 
+New direction: 3
+
+0
+0
+[0, 0]
+Painted 73|54 with 0 
+New direction: 2
+
+1
+0
+[1, 0]
+Painted 74|54 with 1 
+New direction: 1
+
+0
+1
+[0, 1]
+Painted 74|53 with 0 
+New direction: 2
+
+0
+1
+[0, 1]
+Painted 75|53 with 0 
+New direction: 3
+
+0
+0
+[0, 0]
+Painted 75|54 with 0 
+New direction: 2
+
+1
+0
+[1, 0]
+Painted 76|54 with 1 
+New direction: 1
+
+1
+1
+[1, 1]
+Painted 76|53 with 1 
+New direction: 2
+
+0
+1
+[0, 1]
+Painted 77|53 with 0 
+New direction: 3
+
+0
+0
+[0, 0]
+Painted 77|54 with 0 
+New direction: 2
+
+0
+0
+[0, 0]
+Painted 78|54 with 0 
+New direction: 1
+
+0
+1
+[0, 1]
+Painted 78|53 with 0 
+New direction: 2
+
+1
+1
+[1, 1]
+Painted 79|53 with 1 
+New direction: 3
+
+1
+0
+[1, 0]
+Painted 79|54 with 1 
+New direction: 2
+
+0
+0
+[0, 0]
+Painted 80|54 with 0 
+New direction: 1
+
+0
+1
+[0, 1]
+Painted 80|53 with 0 
+New direction: 2
+
+1
+1
+[1, 1]
+Painted 81|53 with 1 
+New direction: 3
+
+1
+0
+[1, 0]
+Painted 81|54 with 1 
+New direction: 2
+
+0
+0
+[0, 0]
+Painted 82|54 with 0 
+New direction: 1
+
+0
+1
+[0, 1]
+Painted 82|53 with 0 
+New direction: 2
+
+0
+1
+[0, 1]
+Painted 83|53 with 0 
+New direction: 3
+
+0
+0
+[0, 0]
+Painted 83|54 with 0 
+New direction: 2
+
+0
+0
+[0, 0]
+Painted 84|54 with 0 
+New direction: 1
+
+0
+1
+[0, 1]
+Painted 84|53 with 0 
+New direction: 2
+
+0
+1
+[0, 1]
+Painted 85|53 with 0 
+New direction: 3
+
+0
+0
+[0, 0]
+Painted 85|54 with 0 
+New direction: 2
+
+1
+0
+[1, 0]
+Painted 86|54 with 1 
+New direction: 1
+
+1
+1
+[1, 1]
+Painted 86|53 with 1 
+New direction: 2
+
+0
+1
+[0, 1]
+Painted 87|53 with 0 
+New direction: 3
+
+0
+0
+[0, 0]
+Painted 87|54 with 0 
+New direction: 2
+
+0
+0
+[0, 0]
+Painted 88|54 with 0 
+New direction: 1
+
+0
+1
+[0, 1]
+Painted 88|53 with 0 
+New direction: 2
+
+1
+1
+[1, 1]
+Painted 89|53 with 1 
+New direction: 3
+
+1
+0
+[1, 0]
+Painted 89|54 with 1 
+New direction: 2
+
+0
+0
+[0, 0]
+Painted 90|54 with 0 
+New direction: 1
+
+0
+1

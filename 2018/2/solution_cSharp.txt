@@ -1,0 +1,73 @@
+
+
+
+    static void adventOfCode_b()
+    {
+        Console.WriteLine("Doing Advent of Code stuff");
+        string[] readText = File.ReadAllLines("B:\\Projekte\\C_Sharp\\Test_1\\input.txt");
+
+        int length = readText.Length;
+
+        for(int i = 0; i < length; i++)
+        {
+            for(int j = i+1; j < length; j++)
+            {
+                int count = 0;
+                for(int k = 0; k < 26; k++)
+                {
+                    count += Convert.ToInt32(!(readText[i][k] == readText[j][k]));
+                }
+
+                if (count == 1)
+                {
+                    string st = "";
+                    for (int k = 0; k < 26; k++)
+                    {
+                        char c = readText[i][k];
+                        if (c == readText[j][k])
+                        {
+                            st += c;
+                        }
+                    }
+                    Console.WriteLine(st);
+                    return;
+                }
+            }
+        }
+
+    }
+
+
+    static void adventOfCode_a()
+    {
+        Console.WriteLine("Doing Advent of Code stuff");
+        string[] readText = File.ReadAllLines("B:\\Projekte\\C_Sharp\\Test_1\\input.txt");
+
+
+        int counter_two = 0;
+        int counter_three = 0;
+        bool two = false;
+        bool three = false;
+
+
+        foreach(string s in readText)
+        {
+            two = false;
+            three = false;
+            foreach (char c in s)
+            {
+                int freq = s.Count(f => (f == c));
+                if (freq == 2) two = true;
+                if (freq == 3) three = true;
+            }
+            counter_two += Convert.ToInt32(two);
+            counter_three += Convert.ToInt32(three);
+        }
+
+        Console.WriteLine("counter_two: " + counter_two);
+        Console.WriteLine("counter_three: " + counter_three);
+        Console.WriteLine("checksum: " + (counter_two*counter_three));
+
+
+
+    }

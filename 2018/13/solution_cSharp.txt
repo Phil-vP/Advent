@@ -1,0 +1,106 @@
+class Program
+{
+
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Hello World");
+
+        adventOfCode_13();
+        
+        Console.WriteLine("Done");
+        Console.ReadLine();
+    }
+
+    static void adventOfCode_13()
+    {
+
+        // string[] readText = File.ReadAllLines("C:\\Users\\Philipp\\Documents\\Advent of Code\\2018\\input.txt");
+
+        List<int> recipes = new List<int>();
+        recipes.Add(3);
+        recipes.Add(7);
+
+        int index_1 = 0;
+        int index_2 = 1;
+        int recipe_1 = recipes[0];
+        int recipe_2 = recipes[1];
+
+        int number_of_recipes = 2;
+
+        int puzzle_input = 540561;
+        string puzzle_input_str = puzzle_input.ToString();
+        int puzzle_length = puzzle_input_str.Length;
+
+        string final_string = "";
+
+        final_string += String.Join(" ", recipes) + "\n";
+        //Console.WriteLine(String.Join(" ", recipes));
+
+        //for (int i = 0; i < 10; i++)
+
+        int substring_start = 0;
+        do
+        {
+            recipe_1 = recipes[index_1];
+            recipe_2 = recipes[index_2];
+
+
+            int new_recipe = recipe_1 + recipe_2;
+
+            if (new_recipe > 9)
+            {
+                int zehner = new_recipe / 10;
+                recipes.Add(zehner);
+                number_of_recipes++;
+            }
+
+            recipes.Add(new_recipe % 10);
+
+            number_of_recipes++;
+
+            int new_index_1 = (index_1 + 1 + recipe_1);
+            int new_index_2 = (index_2 + 1 + recipe_2);
+
+            // Console.WriteLine("{0} + {1} = {2}, old index_1 = {3}, new index_1 = {4}, old index_2 = {5}, new index_2 = {6}", recipe_1, recipe_2, new_recipe, index_1, new_index_1, index_2, new_index_2);
+
+            index_1 = new_index_1 % number_of_recipes;
+            index_2 = new_index_2 % number_of_recipes;
+
+            // final_string += String.Join(" ", recipes) + "\n";
+            // Console.WriteLine(String.Join(" ", recipes));
+
+            
+            /*substring_start = number_of_recipes - puzzle_length;
+            if(substring_start < 0)
+            {
+                substring_start = 0;
+            }*/
+
+        }
+        // while (number_of_recipes < puzzle_input + 10);
+        while (number_of_recipes < 100000000);
+
+        string join_string = String.Join("", recipes);
+
+        if (join_string.Contains(puzzle_input_str))
+        {
+            int index = join_string.IndexOf(puzzle_input_str);
+            Console.WriteLine("Is drin, bei Index {0}", index);
+        }
+        else
+        {
+            Console.WriteLine("Nicht drin");
+        }
+
+        // Console.WriteLine(String.Join(" ", recipes));
+
+        // string str = String.Join("", recipes.GetRange(puzzle_input, 10));
+        // Console.WriteLine(number_of_recipes - (puzzle_length));
+
+        
+    }
+
+
+
+
+}

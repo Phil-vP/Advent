@@ -1,0 +1,83 @@
+    static void adventOfCode_11()
+    {
+
+        /*string[] readText = File.ReadAllLines("C:\\Users\\Philipp\\Documents\\Advent of Code\\2018\\input.txt");
+
+        foreach (string s in readText)
+        {
+
+        }*/
+
+        int[,] grid = new int[300, 300];
+
+        for (int x = 0; x <= 299; x++)
+        {
+            for (int y = 0; y <= 299; y++)
+            {
+                grid[x, y] = getPowerLevel(x+1, y+1);
+            }
+        }
+
+        int maxX = 0;
+        int maxY = 0;
+
+        int maxValue = 0;
+
+        int maxSize = 0;
+
+        for (int x = 0; x <= 297; x++)
+        {
+            for (int y = 0; y <= 297; y++)
+            {
+                /*int value = grid[x, y] + grid[x + 1, y] + grid[x + 2, y]+
+                            grid[x, y + 1] + grid[x + 1, y + 1] + grid[x + 2, y + 1] +
+                            grid[x, y + 2] + grid[x + 1, y + 2] + grid[x + 2, y + 2];*/
+                
+                int value = 0;
+
+                for (int size = 1; size <= (300 - Math.Max(x,y)); size++)
+                //for (int size = 1; size <= 3; size++)
+                {
+                    for(int x_iter = 0; x_iter < size; x_iter++)
+                    {
+                        value += grid[x + x_iter, y + size - 1];
+                    }
+                    for (int y_iter = 0; y_iter < size; y_iter++)
+                    {
+                        value += grid[x + size - 1, y + y_iter];
+                    }
+
+                    //Den doppelten rausnehmen
+                    value -= grid[x + size - 1, y + size - 1];
+
+                    if (value > maxValue)
+                    {
+                        maxValue = value;
+                        maxX = x;
+                        maxY = y;
+                        maxSize = size;
+                    }
+                }
+            }
+        }
+
+        Console.WriteLine("{0},{1},{2} with value {3}", maxX+1, maxY+1, maxSize, maxValue);
+
+
+    }
+
+    static int getPowerLevel(int x, int y)
+    {
+        int rackID = x + 10;
+        int powerLevel = rackID * y;
+
+        powerLevel += serial;
+        powerLevel *= rackID;
+
+        powerLevel = (powerLevel / 100) % 10;
+
+        powerLevel -= 5;
+
+        return powerLevel;
+
+    }

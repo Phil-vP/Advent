@@ -1,0 +1,107 @@
+class Program
+{
+    static int offset = 30;
+    static int field_length = 160;
+
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Hello World");
+
+        adventOfCode_12();
+        
+
+        Console.WriteLine("Done");
+        Console.ReadLine();
+    }
+
+    static void adventOfCode_12()
+    {
+
+        string[] readText = File.ReadAllLines("C:\\Users\\Philipp\\Documents\\Advent of Code\\2018\\input.txt");
+
+        string positions = "##.##.#.#...#......#..#.###..##...##.#####..#..###.########.##.....#...#...##....##.#...#.###...#.##";
+        // string positions = "#..#.#..##......###...###";
+        positions = positions.Replace('#', '1');
+        positions = positions.Replace('.', '0');
+        Console.WriteLine("Initial positions: {0}", positions);
+
+        int[] rules = new int[32];
+
+        int[] plants = new int[field_length]; // 30 buffer left & right
+
+        for(int i = 0; i < positions.Length; i++)
+        {
+            plants[i + offset] = Convert.ToInt32(positions.ElementAt(i)) - 48;
+        }
+
+        bool[] rules_bool = new bool[32];
+
+        Console.WriteLine();
+        foreach (int x in plants)
+        {
+            Console.Write(x);
+        }
+        Console.WriteLine();
+
+        for (int i = 0; i < 32; i++) { Console.WriteLine("{0}: {1}", i, rules[i]); }
+
+        foreach (string s in readText)
+        {
+            string st = s;
+            Console.WriteLine(st);
+
+            st = st.Replace('#', '1');
+            st = st.Replace('.', '0');
+
+            Console.WriteLine(st);
+
+            string[] split = st.Split(' ');
+            int index_dec = Convert.ToInt32(split[0], 2);
+            rules[index_dec] = Convert.ToInt32(split[1]);
+            Console.WriteLine(index_dec);
+            Console.WriteLine();
+        }
+
+        for (int i = 0; i < 32; i++) { Console.WriteLine("{0}: {1}", i, rules[i]); }
+
+        Console.WriteLine("PLANTS: ");
+        foreach (int x in plants) { Console.Write(x); }
+        Console.WriteLine();
+
+        for (int generation = 1; generation <= 20; generation++)
+        {
+
+            int[] plants_new = new int[field_length];
+
+            for (int i = 2; i <= field_length - 3; i++)
+            {
+                int[] area = new int[5];
+                Array.Copy(plants, i - 2, area, 0, 5);
+                string s = String.Join("", area);
+                int index = Convert.ToInt32(s, 2);
+                plants_new[i] = rules[index];
+            }
+            Array.Copy(plants_new, plants, field_length);
+
+            int sum = 0;
+
+            for (int i = 0; i < field_length; i++)
+            {
+                sum += (i - offset) * plants[i];
+            }
+
+            Console.WriteLine("PLANTS after Generation {0}, sum = {1}: ", generation, sum);
+            foreach (int x in plants) { Console.Write(x); }
+            Console.WriteLine();
+        }
+
+        // Console.WriteLine("\n Final number: {0}", sum);
+
+
+
+    }
+
+
+
+
+}

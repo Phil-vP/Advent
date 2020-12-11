@@ -1,0 +1,37 @@
+    static void adventOfCode_1()
+    {
+        Console.WriteLine("Doing Advent of Code stuff");
+        string[] readText = File.ReadAllLines("B:\\Projekte\\C_Sharp\\Test_1\\input.txt");
+
+        int counter = 0;
+        List<int> allNumbers = new List<int>();
+
+        bool found = false;
+
+        do {
+            foreach (string s in readText)
+            {
+                //Console.WriteLine(s);
+                int s_int = Convert.ToInt32(s);
+                //Console.WriteLine(s_int);
+
+                counter += s_int;
+                //Console.WriteLine(counter);
+
+                if (allNumbers.Contains(counter))
+                {
+                    found = true;
+                    break;
+                }
+                else
+                {
+                    allNumbers.Add(counter);
+                }
+            }
+        }
+        while(!found);
+
+        Console.WriteLine(counter);
+    }
+
+################################################################################################################################
