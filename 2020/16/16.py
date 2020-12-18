@@ -51,8 +51,12 @@ def doSomething():
     
     bigRange = []
     
-    for c in list(allConstraints.values()):
-        spl = c.split(" or ")
+    fieldConstrains = {}
+    
+    for k in list(allConstraints.keys()):
+        value = allConstraints[k]
+        spl = value.split(" or ")
+        thisRange = []
         for sp in spl:
             split = sp.split("-")
             limit1 = int(split[0])
@@ -60,6 +64,9 @@ def doSomething():
             for r in range(limit1, limit2+1):
                 if r not in bigRange:
                     bigRange.append(r)
+            thisRange.extend(list(range(limit1, limit2)))
+        fieldConstrains[k] = thisRange
+        
     
     bigRange.sort()
     # print(bigRange)
@@ -92,6 +99,10 @@ def doSomething():
     print("\nAll valid tickets:")
     for t in allTickets:
         print(t)
+    
+    
+    
+    
     
     
 
