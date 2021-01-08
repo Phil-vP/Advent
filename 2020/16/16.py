@@ -100,13 +100,6 @@ def doSomething():
     for t in allTickets:
         print(t)
     
-    
-    
-    
-    
-    
-
-def ex_a():
     bigRange = []
     
     for c in list(allConstraints.values()):
