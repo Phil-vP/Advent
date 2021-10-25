@@ -18,8 +18,6 @@ fn main() {
 fn _one(all_lines: &Vec<String>) {
     let mut counter = 0;
     for line in all_lines {
-        
-        // println!("line finished: {}\nlength: {}\n", final_string, final_string.len());
 
         let final_string = decompress(line.to_owned());
 
@@ -33,18 +31,10 @@ fn _two(all_lines: &Vec<String>) {
     let mut counter = 0;
     
     for line in all_lines {
-        
-        println!("Started line {}", line);
 
-        let mut final_string = decompress(line.to_owned());
+        let length = decompress_number(line);
 
-        while final_string.contains('(') {
-            final_string = decompress(final_string);
-        }
-
-        counter += final_string.len();
-
-        println!("Finished line \n");
+        counter += length;
     }
 
     println!("Counter: {}", counter);
@@ -96,4 +86,48 @@ fn decompress(input: String) -> String {
     let final_string: String = full_vec.iter().collect();
 
     final_string
+}
+
+fn decompress_number(input: &str) -> i64 {
+    let mut length = 0;
+    let mut chars = input.chars();
+
+    while let Some(c) = chars.next() {
+        match c {
+            '(' => {
+                let mut num_1_parse = "".to_owned();
+                let mut num_1_char = chars.next().unwrap();
+                while num_1_char != 'x' {
+                    num_1_parse.push(num_1_char);
+                    num_1_char = chars.next().unwrap();
+                }
+                let num_1 = num_1_parse.parse::<usize>().unwrap();
+
+                // num_1_char is now x
+
+                let mut num_2_parse = "".to_owned();
+                let mut num_2_char = chars.next().unwrap();
+                
+                while num_2_char != ')' {
+                    num_2_parse.push(num_2_char);
+                    num_2_char = chars.next().unwrap();
+                }
+                let num_2 = num_2_parse.parse::<usize>().unwrap();
+
+                // num_2_char is now )
+
+                let mut slice_to_parse: String = "".to_owned();
+                for _i in 0..num_1 {
+                    slice_to_parse.push(chars.next().unwrap());
+                }
+
+                length += num_2 as i64 * decompress_number(&slice_to_parse);
+
+            },
+            _ => length += 1
+        }
+    }
+
+
+    length
 }
