@@ -5,7 +5,7 @@ use std::fs::File;
 fn main() {
     let mut all_lines: Vec<String> = Vec::new();
 
-    let testing = false;
+    let testing = true;
 
     let file: File = if testing {
         File::open("test_input.txt").unwrap()
