@@ -1,7 +1,6 @@
-use std::i128::MAX;
-use std::io::{BufReader,BufRead};
 use std::fs::File;
-
+use std::i128::MAX;
+use std::io::{BufRead, BufReader};
 
 fn main() {
     let mut all_lines: Vec<String> = Vec::new();
@@ -15,7 +14,6 @@ fn main() {
     // _two(&all_lines);
 }
 
-
 fn _one(all_lines: &Vec<String>) {
     let mut max = 0;
     let mut current = 0;
@@ -23,8 +21,7 @@ fn _one(all_lines: &Vec<String>) {
         if l.is_empty() {
             max = max.max(current);
             current = 0;
-        }
-        else {
+        } else {
             current += l.parse::<i32>().unwrap();
         }
     }
@@ -39,8 +36,7 @@ fn _two(all_lines: &Vec<String>) {
         if l.is_empty() {
             sum_list.push(current);
             current = 0;
-        }
-        else {
+        } else {
             current += l.parse::<i32>().unwrap();
         }
     }

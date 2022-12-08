@@ -1,6 +1,5 @@
-use std::io::{BufReader,BufRead};
 use std::fs::File;
-
+use std::io::{BufRead, BufReader};
 
 fn main() {
     let mut all_lines: Vec<String> = Vec::new();
@@ -9,11 +8,10 @@ fn main() {
 
     let file: File = if testing {
         File::open("test_input.txt").unwrap()
-    }
-    else{
+    } else {
         File::open("input.txt").unwrap()
     };
-	
+
     for line in BufReader::new(file).lines() {
         all_lines.push(line.unwrap());
     }
@@ -48,7 +46,7 @@ fn _two(all_lines: &Vec<String>) {
         let second = chunk[1].clone();
         let third = chunk[2].clone();
         for c in first.chars() {
-            if second.contains(c) && third.contains(c) && !common_chars.contains(&c){
+            if second.contains(c) && third.contains(c) && !common_chars.contains(&c) {
                 common_chars.push(c);
                 sum += get_val(c);
             }

@@ -1,14 +1,12 @@
-use std::io::{BufReader,BufRead};
 use std::fs::File;
-
+use std::io::{BufRead, BufReader};
 
 fn main() {
     let testing = false;
 
     let file: File = if testing {
         File::open("test_input.txt").unwrap()
-    }
-    else{
+    } else {
         File::open("input.txt").unwrap()
     };
 
@@ -19,13 +17,13 @@ fn main() {
     let mut instructions: Vec<(usize, usize, usize)> = Vec::new();
 
     let mut number_of_stacks: usize = 0;
-	
+
     for line in BufReader::new(file).lines() {
         let mut line_str = line.unwrap();
         if line_str == "" {
             continue;
         }
-        if first_part {    
+        if first_part {
             if !line_str.contains('[') {
                 first_part = false;
                 continue;
@@ -33,7 +31,7 @@ fn main() {
             line_str += " ";
             let chars: Vec<char> = line_str.chars().collect();
             number_of_stacks = chars.len() / 4;
-            
+
             if first_ever {
                 first_ever = false;
                 for i in 0..number_of_stacks {
@@ -43,13 +41,12 @@ fn main() {
             }
 
             for i in 0..number_of_stacks {
-                let char_in_question = chars[1 + i*4];
+                let char_in_question = chars[1 + i * 4];
                 if char_in_question != ' ' {
                     all_stacks[i].push(char_in_question);
                 }
             }
-        }
-        else{
+        } else {
             let split: Vec<&str> = line_str.split(" ").collect();
             let mut instruction: (usize, usize, usize) = (0, 0, 0);
             instruction.0 = split[1].parse::<usize>().unwrap();
@@ -67,7 +64,6 @@ fn main() {
     // _one(&all_stacks, &instructions);
     _two(&all_stacks, &instructions);
 }
-
 
 fn _one(stacks: &Vec<Vec<char>>, instructions: &Vec<(usize, usize, usize)>) {
     let mut stacks = stacks.clone();
@@ -94,8 +90,9 @@ fn _two(stacks: &Vec<Vec<char>>, instructions: &Vec<(usize, usize, usize)>) {
         let origin_size = stacks[stack_origin].len();
         let stack_destination = instruction.2 - 1;
 
-        let mut storage: Vec<char> = stacks[stack_origin][origin_size-number_to_move..origin_size].to_vec();
-        stacks[stack_origin].truncate(origin_size-number_to_move);
+        let mut storage: Vec<char> =
+            stacks[stack_origin][origin_size - number_to_move..origin_size].to_vec();
+        stacks[stack_origin].truncate(origin_size - number_to_move);
         stacks[stack_destination].append(&mut storage);
     }
 

@@ -1,6 +1,5 @@
-use std::io::{BufReader,BufRead};
 use std::fs::File;
-
+use std::io::{BufRead, BufReader};
 
 fn main() {
     let mut all_plays: Vec<(char, char)> = Vec::new();
@@ -9,11 +8,10 @@ fn main() {
 
     let file: File = if testing {
         File::open("test_input.txt").unwrap()
-    }
-    else{
+    } else {
         File::open("input.txt").unwrap()
     };
-    
+
     for line in BufReader::new(file).lines() {
         let line = line.unwrap();
         let mut chars = line.chars();
@@ -26,7 +24,6 @@ fn main() {
     // _one(&all_plays);
     // _two(&all_plays);
 }
-
 
 fn _one(all_plays: &Vec<(char, char)>) {
     let mut final_sum = 0;
