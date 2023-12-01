@@ -1,7 +1,6 @@
 use std::collections::HashMap;
-use std::io::{BufReader,BufRead};
 use std::fs::File;
-
+use std::io::{BufRead, BufReader};
 
 fn main() {
     let mut all_lines: Vec<String> = Vec::new();
@@ -11,11 +10,10 @@ fn main() {
     let file: File = if testing {
         // File::open("test_input.txt").unwrap()
         File::open("test_input_2.txt").unwrap()
-    }
-    else{
+    } else {
         File::open("input.txt").unwrap()
     };
-	
+
     for line in BufReader::new(file).lines() {
         all_lines.push(line.unwrap());
     }
@@ -43,7 +41,7 @@ fn parse_line_one(line: &String) -> i16 {
 
 fn parse_line_two(line: &String, list_of_numbers: &Vec<String>) -> i16 {
     let mut occurence_map: HashMap<usize, &String> = HashMap::new();
-    
+
     for number_string in list_of_numbers {
         if let Some(index) = line.find(number_string) {
             occurence_map.insert(index, number_string);
@@ -83,7 +81,7 @@ fn parse_line_two(line: &String, list_of_numbers: &Vec<String>) -> i16 {
         "9" => 9,
         _ => 0,
     };
-    
+
     let second = match second_number_string.as_str() {
         "one" => 1,
         "two" => 2,
@@ -109,7 +107,6 @@ fn parse_line_two(line: &String, list_of_numbers: &Vec<String>) -> i16 {
     return first * 10 + second;
 }
 
-
 fn _one(all_lines: &Vec<String>) {
     let mut sum: i32 = 0;
     for line in all_lines {
@@ -121,9 +118,14 @@ fn _one(all_lines: &Vec<String>) {
 }
 
 fn _two(all_lines: &Vec<String>) {
+    let list_of_numbers: Vec<String> = [
+        "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "one", "two", "three", "four", "five",
+        "six", "seven", "eight", "nine",
+    ]
+    .iter()
+    .map(|s| s.to_string())
+    .collect();
 
-    let list_of_numbers: Vec<String> = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"].iter().map(|s| s.to_string()).collect();
-    
     let mut sum: i32 = 0;
     for line in all_lines {
         let parsed = parse_line_two(line, &list_of_numbers);
