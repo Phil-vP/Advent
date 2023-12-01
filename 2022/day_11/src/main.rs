@@ -94,7 +94,7 @@ fn main() {
             current_op_value,
         ));
     }
-    
+
     _one(&mut monkeys, 20);
     _two(&mut monkeys_two, div_value, 10000);
 }
@@ -103,7 +103,6 @@ fn _one(all_monkeys: &mut Vec<Monkey>, number_of_runs: usize) {
     let number_of_monkeys = all_monkeys.len();
 
     for _ in 0..number_of_runs {
-
         for i in 0..number_of_monkeys {
             let length = all_monkeys[i].get_item_list_len();
             for _ in 0..length {
@@ -111,7 +110,6 @@ fn _one(all_monkeys: &mut Vec<Monkey>, number_of_runs: usize) {
                 all_monkeys[new_monkey].add_item(new_value);
             }
         }
-
     }
 
     _print_monkeys(all_monkeys);
@@ -127,7 +125,6 @@ fn _one(all_monkeys: &mut Vec<Monkey>, number_of_runs: usize) {
     count *= inspection_count_vec[0];
     count *= inspection_count_vec[1];
 
-
     println!("Count: {}", count);
 }
 
@@ -139,7 +136,6 @@ fn _two(all_monkeys: &mut Vec<MonkeyTwo>, div_value: i64, number_of_runs: usize)
     }
 
     for _ in 0..number_of_runs {
-
         for i in 0..number_of_monkeys {
             let length = all_monkeys[i].get_item_list_len();
             for _ in 0..length {
@@ -147,7 +143,6 @@ fn _two(all_monkeys: &mut Vec<MonkeyTwo>, div_value: i64, number_of_runs: usize)
                 all_monkeys[new_monkey].add_item(new_value);
             }
         }
-
     }
 
     _print_monkeys_two(all_monkeys);
@@ -162,7 +157,6 @@ fn _two(all_monkeys: &mut Vec<MonkeyTwo>, div_value: i64, number_of_runs: usize)
     let mut count = 1;
     count *= inspection_count_vec[0];
     count *= inspection_count_vec[1];
-
 
     println!("Count: {}", count);
 }

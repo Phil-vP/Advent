@@ -88,5 +88,4 @@ impl Monkey {
     pub fn get_id(&self) -> Id {
         self.id
     }
-
 }
